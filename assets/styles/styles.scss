@@ -1,0 +1,1351 @@
+//abstracts*
+//------------------------------------
+
+//- Fonts
+
+/* 100 */
+
+@font-face {
+  font-family: 'MuseoSansCyrl';
+  src: local('MuseoSansCyrl'),
+  local('MuseoSansCyrl-100'),
+  url('../fonts/museoSansCyrl/MuseoSansCyrl100.ttf') format('truetype'),
+  url('../fonts/museoSansCyrl/MuseoSansCyrl100.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+}
+/* 300 */
+
+@font-face {
+  font-family: 'MuseoSansCyrl';
+  src: local('MuseoSansCyrl'),
+  local('MuseoSansCyrl-300'),
+  url('../fonts/museoSansCyrl/MuseoSansCyrl-300.ttf') format('truetype'),
+  url('../fonts/museoSansCyrl/MuseoSansCyrl-300.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* 500 */
+
+@font-face {
+  font-family: 'MuseoSansCyrl';
+  src: local('MuseoSansCyrl'),
+  local('MuseoSansCyrl-500'),
+  url('../fonts/museoSansCyrl/MuseoSansCyrl-500.ttf') format('truetype'),
+  url('../fonts/museoSansCyrl/MuseoSansCyrl-500.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* 700 */
+
+@font-face {
+  font-family: 'MuseoSansCyrl';
+  src: local('MuseoSansCyrl'),
+  local('MuseoSansCyrl-700'),
+  url('../fonts/museoSansCyrl/MuseoSansCyrl-700.ttf') format('truetype'),
+  url('../fonts/museoSansCyrl/MuseoSansCyrl-700.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* 900 */
+
+@font-face {
+  font-family: 'MuseoSansCyrl';
+  src: local('MuseoSansCyrl'),
+  local('MuseoSansCyrl-900'),
+  url('../fonts/museoSansCyrl/MuseoSansCyrl-900.ttf') format('truetype'),
+  url('../fonts/museoSansCyrl/MuseoSansCyrl-900.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* 100 */
+
+@font-face {
+  font-family: 'GothamPro';
+  src: local('GothamPro'),
+  local('GothamPro-100'),
+  url('../fonts/gotham/GothamPro.ttf') format('truetype'),
+  url('../fonts/gotham/GothamPro.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+}
+
+/* 300 */
+
+@font-face {
+  font-family: 'GothamPro';
+  src: local('GothamPro'),
+  local('GothamPro-300'),
+  url('../fonts/gotham/GothamPro-Medium.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* 500 */
+
+@font-face {
+  font-family: 'GothamPro';
+  src: local('GothamPro'),
+  local('GothamPro-500'),
+  url('../fonts/gotham/GothamPro-Bold.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* 300 */
+
+@font-face {
+  font-family: 'BerlingskeSerif';
+  src: local('BerlingskeSerif'),
+  local('BerlingskeSerif-300'),
+  url('../fonts/BerlingskeSerif/BerlingskeSerif-MdItalic.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+}
+
+/* 500 */
+
+@font-face {
+  font-family: 'BerlingskeSerif';
+  src: local('BerlingskeSerif'),
+  local('BerlingskeSerif-500'),
+  url('../fonts/BerlingskeSerif/BerlingskeSerif-BlkItalic.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+}
+
+/* 700 */
+
+@font-face {
+  font-family: 'BerlingskeSerif';
+  src: local('BerlingskeSerif'),
+  local('BerlingskeSerif-700'),
+  url('../fonts/BerlingskeSerif/BerlingskeSerif-DBdItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* 900 */
+
+@font-face {
+  font-family: 'BerlingskeSerif';
+  src: local('BerlingskeSerif'),
+  local('BerlingskeSerif-900'),
+  url('../fonts/BerlingskeSerif/BerlingskeSerif-ExtBdIta.woff') format('woff');
+  font-weight: 900;
+  font-style: italic;
+}
+
+//-Variables
+//----------
+//color for
+$primary: rgb(255, 255, 255);
+$secondary: #000000;
+$btn-sandy-bright: #ff9c04;
+$btn-sandy-dark: #ff6d01;
+$thirdly:rgba(213,19,42, 1);
+$fourthly: #828282;
+$fifthly: #46586b;
+
+//media for
+$viewport-3: 320px;
+$viewport-4: 375px;
+$viewport-5: 480px;
+$viewport-6: 600px;
+$viewport-8: 768px;
+$viewport-9: 900px;
+$viewport-10: 1024px;
+$viewport-12: 1280px;
+$viewport-14: 1440px;
+$viewport-16: 1600px;
+$viewport-18: 1820px;
+$viewport-19: 1920px;
+
+//-mixins
+@mixin flex($ai: stretch, $jc: flex-start, $fd: row,$fw: nowrap, $ac: stretch) {
+  display: flex;
+  align-items: $ai;
+  justify-content: $jc;
+  flex-direction: $fd;
+  flex-wrap: $fw;
+  align-content: $ac;
+}
+
+@mixin size($w: none, $h: none) { //@mixin size($w: none, $h: $w)
+  width: $w;
+  height: $h;
+}
+
+@mixin font($ff, $fs, $lh, $fw, $c) {
+  font-family: $ff, Arial, sans-serif;
+  font-size: $fs;
+  line-height: $lh;
+  font-weight: $fw;
+  color: $c;
+}
+
+//layout
+//------------------------------------
+
+html, body {
+  @include size(auto, 100vh);
+  background: url("../images/bg.png") center 100%  no-repeat;
+  background-size: cover;
+}
+
+.wrapper {
+  margin: 0 auto;
+  @include size(61vw);
+  padding: 0 15px;
+  @media screen and (max-width: $viewport-18) {
+    @include size(71vw);
+  }
+  @media screen and (max-width: $viewport-16) {
+    @include size(74vw);
+  }
+  @media screen and (max-width: $viewport-14) {
+    @include size(78vw);
+  }
+  @media screen and (max-width: $viewport-12) {
+    @include size(90vw);
+    padding: 0;
+  }
+}
+
+.header {
+  @include flex(center, space-between);
+  @include size(100%, 170px);
+  @media screen and (max-width: $viewport-6) {
+    @include flex(center, center, column);
+    @include size (100%, 260px)
+  }
+}
+
+.company {
+  @include flex(center, space-between);
+  @include size(29.48vw);
+  @media screen and (max-width: $viewport-18) {
+    @include size(30.48vw);
+  }
+  @media screen and (max-width: $viewport-16) {
+    @include size(34.48vw);
+  }
+  @media screen and (max-width: $viewport-14) {
+    @include size(40.48vw);
+  }
+  @media screen and (max-width: $viewport-12) {
+    @include size(50.48vw);
+  }
+  @media screen and (max-width: $viewport-10) {
+    @include size(67.48vw);
+  }
+  @media screen and (max-width: $viewport-6) {
+    @include flex(center, center);
+  }
+
+  &__details {
+    @include flex(flex-start, center, column);
+    @include font("MuseoSansCyrl", 12px, normal, 300, $fourthly);
+    letter-spacing: 0.6px;
+    @media screen and (max-width: $viewport-8) {
+     display: none;
+    }
+
+    & > p {
+      margin: 17px 0 9px 0;
+      @media screen and (max-width: $viewport-12) {
+        padding-right: 15%;
+      }
+      @media screen and (max-width: $viewport-10) {
+        padding-right: 25%;
+      }
+    }
+  }
+
+   &__logo {
+     margin-right: 25px;
+     @media screen and (max-width: $viewport-8) {
+       width: 85%;
+     }
+   }
+
+  &__advantages {
+    @include flex(center, center, row, nowrap, center);
+
+    @media screen and (max-width: $viewport-9) {
+      display: none;
+    }
+  }
+
+  &__clock {
+    @include size(30px, 27px);
+    margin: 0 1px 0 -6px;
+  }
+
+  &__medal {
+    @include size(34px, 26px);
+    margin: 0 6px 0 14px;
+  }
+
+  &__br {
+    @media screen and (max-width: $viewport-12) {
+      display: none;
+    }
+  }
+ }
+
+.contacts {
+  @include flex(center, space-between);
+  @include size(26.8vw);
+  padding-top: 9px;
+  @media screen and (max-width: $viewport-18) {
+    @include size(30.8vw);
+  }
+  @media screen and (max-width: $viewport-16) {
+    @include size(33.8vw);
+  }
+  @media screen and (max-width: $viewport-14) {
+    @include flex(flex-end, stretch, column);
+    @include size(26.8vw);
+  }
+  @media screen and (max-width: $viewport-8) {
+    @include size(56.8vw);
+  }
+  @media screen and (max-width: $viewport-8) {
+    @include flex(center, stretch, column);
+  }
+  @media screen and (max-width: $viewport-6) {
+    margin: 20px 0 0  0;
+  }
+}
+
+.prices {
+  position: relative;
+  @include flex(center, scretch, row-reverse);
+  z-index: 0;
+
+  & > span {
+    @include font("MuseoSansCyrl", 12px, normal, 300, $thirdly);
+    border-bottom: 1px dashed $thirdly;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    padding-bottom: 3px;
+    @media screen and (max-width: $viewport-18) {
+      border-bottom: 0;
+      @include font("MuseoSansCyrl", 12px, normal, 500, $thirdly);
+    }
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 25px;
+    left: 25px;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 62px 8px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 0 62px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 62px 8px rgba(0, 0, 0, 0.3)
+  }
+
+  &__catalog {
+    @include size(68px, 69px);
+    margin-right: 17px;
+    @media screen and (max-width: $viewport-8) {
+      @include size(58px, 59px);
+    }
+    @media screen and (max-width: $viewport-5) {
+      @include size(44px, 45px);
+      margin-right: 8px;
+    }
+  }
+}
+
+.phone {
+  @include flex(flex-start, space-between, column);
+  @include size(auto, 48px);
+  @media screen and (max-width: $viewport-6) {
+    margin: 10px 0 0  0;
+  }
+  @media screen and (max-width: $viewport-6) {
+    @include flex(center, space-between, column);
+  }
+
+  &__details {
+    @include font("MuseoSansCyrl", 12.3px, normal, 300, #00af47);
+    @include flex(center);
+
+    & > div {
+      @include size(25px);
+    }
+  }
+
+  &__circle {
+    padding-left: 5px;
+  }
+
+  &__number {
+    @include font("GotyhamPro", 18.5px, normal, 900, $secondary);
+    @include flex(center);
+    @media screen and (max-width: $viewport-4) {
+      @include font("GotyhamPro", 16.5px, normal, 900, $secondary);
+    }
+
+    & > div {
+      @include size(25px);
+    }
+  }
+}
+
+.main {
+  @include flex(flex-start, space-between);
+  @media screen and (max-width: $viewport-10) {
+    @include flex(center, center, column);
+  }
+}
+
+.banner {
+  position: relative;
+  margin: 40px 0 48px 0;
+  @include font("BerlingskeSerif", 18px, normal, 300, $primary);
+  letter-spacing: 0.4px;
+  @media screen and (max-width: $viewport-6) {
+    display: none;
+  }
+
+  &__yellow {
+    -webkit-box-shadow: 0 16px 26px -24px rgba(0,0,0,0.27);
+    -moz-box-shadow: 0 16px 26px -24px rgba(0,0,0,0.27);
+    box-shadow: 0 16px 26px -24px rgba(0,0,0,0.27);
+  }
+
+    &__dollar {
+    position: absolute;
+    top: -15px;
+    left: 211px;
+  }
+
+  &__free {
+    position: absolute;
+    top: 24px;
+    left: 28px;
+    letter-spacing: 0.8px;
+  }
+}
+
+.calculation {
+
+  &__header {
+    @include font("GothamPro", 40px, normal, 100, $secondary);
+    letter-spacing: 0.4px;
+
+    @media screen and (max-width: $viewport-14) {
+      @include font("GothamPro", 36px, normal, 100, $secondary);
+    }
+    @media screen and (max-width: $viewport-12) {
+      @include font("GothamPro", 30px, normal, 100, $secondary);
+    }
+    @media screen and (max-width: $viewport-10) {
+      @include font("GothamPro", 36px, normal, 100, $secondary);
+      letter-spacing: 0.4px;
+      text-align: center;
+    }
+    @media screen and (max-width: $viewport-8) {
+      @include font("GothamPro", 26px, normal, 100, $secondary);
+    }
+    @media screen and (max-width: $viewport-6) {
+      margin-top: 20px;
+    }
+
+    & p > span {
+      position: relative;
+      @include font("BerlingskeSerif", 40px, normal, 500, $secondary);
+
+      @media screen and (max-width: $viewport-14) {
+        @include font("BerlingskeSerif", 36px, normal, 500, $secondary);
+      }
+      @media screen and (max-width: $viewport-12) {
+        @include font("BerlingskeSerif", 30px, normal, 500, $secondary);
+      }
+      @media screen and (max-width: $viewport-10) {
+        @include font("BerlingskeSerif", 36px, normal, 500, $secondary);
+      }
+      @media screen and (max-width: $viewport-8) {
+        @include font("BerlingskeSerif", 26px, normal, 500, #d5132a);
+      }
+      @media screen and (max-width: $viewport-6) {
+        @include font("BerlingskeSerif", 22px, normal, 500, #d5132a);
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        @include size(176px, 1px);
+        background-image: linear-gradient(90deg, #d5132a 26%, transparent 31%, transparent 30%,
+                transparent 38%, #d5132a 44%, #d5132a 72%, transparent 40%, transparent 100%);
+        background-size: 20px 1px;
+        top: 45px;
+        left: 0;
+        padding-bottom: 3px;
+        @media screen and (max-width: $viewport-14) {
+          @include size(166px, 1px);
+        }
+        @media screen and (max-width: $viewport-12) {
+          @include size(136px, 1px);
+          top: 34px;
+        }
+        @media screen and (max-width: $viewport-10) {
+          @include size(165px, 1px);
+          top: 40px;
+        }
+        @media screen and (max-width: $viewport-8) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__line {
+    position: relative;
+    @include font("GothamPro", 24px, normal, 100, $secondary);
+    letter-spacing: 0.3px;
+    padding-left: 64px;
+    margin: 29px 0;
+    @media screen and (max-width: $viewport-12) {
+      margin: 27px 0 50px 0;
+    }
+    @media screen and (max-width: $viewport-10) {
+      @include font("GothamPro", 20px, normal, 100, $secondary);
+      text-align: center;
+      padding: 0;
+      margin: 20px 0 50px 0;
+    }
+    @media screen and (max-width: $viewport-8) {
+      @include font("GothamPro", 17px, normal, 100, $secondary);
+    }
+    @media screen and (max-width: $viewport-5) {
+      @include font("GothamPro", 13px, normal, 100, $secondary);
+    }
+
+    & p {
+      @media screen and (max-width: $viewport-16) {
+        padding-right: 102px;
+      }
+      @media screen and (max-width: $viewport-12) {
+        padding-right: 112px;
+      }
+      @media screen and (max-width: $viewport-10) {
+        padding: 0;
+      }
+
+      & > span {
+        position: relative;
+        @include font("BerlingskeSerif", 24px, normal, 900, $secondary);
+        z-index: 1;
+        @media screen and (max-width: $viewport-10) {
+          @include font("BerlingskeSerif", 20px, normal, 900, $secondary);
+        }
+        @media screen and (max-width: $viewport-8) {
+          @include font("BerlingskeSerif", 17px, normal, 900, $secondary);
+        }
+        @media screen and (max-width: $viewport-5) {
+          @include font("BerlingskeSerif", 13px, normal, 900, rgba(224, 94, 37, 1));
+        }
+
+
+        &:after {
+          content: "";
+          position: absolute;
+          @include size(148px, 10px);
+          top: 19px;
+          z-index: -1;
+          background: #fbdcb1;
+          right: -20px;
+          @media screen and (max-width: $viewport-10) {
+            @include size(134px, 10px);
+            top: 15px;
+            right: -24px
+          }
+          @media screen and (max-width: $viewport-8) {
+            @include size(110px, 10px);
+            top: 12px;
+            right: -17px;
+          }
+          @media screen and (max-width: $viewport-5) {
+           display: none;
+          }
+        }
+
+        @media screen and (max-width: $viewport-10) {
+          &:before {
+            content: "";
+            position: absolute;
+            @include size(45px, 2px);
+            background: #91908c;
+            left: -305px;
+            width: 40px;
+            top: 13px;
+            @media screen and (max-width: $viewport-8) {
+              position: absolute;
+              @include size(30px, 2px);
+              background: #91908c;
+              left: -243px;
+              width: 18px;
+              top: 10px;
+              content: "";
+            }
+            @media screen and (max-width: $viewport-5) {
+              @include size(10px, 2px);
+              left: -182px;
+              top: 8px;
+            }
+          }
+        }
+      }
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      @include size(45px, 2px);
+      top: 16px;
+      left: 0;
+      background: #91908c;
+      @media screen and (max-width: $viewport-10) {
+        left: 175px;
+        width: 40px;
+        top: 13px;
+      }
+      @media screen and (max-width: $viewport-10) {
+        background: transparent;
+        //position: absolute;
+        //left: 175px;
+        //width: 40px;
+        //top: 13px;
+      }
+    }
+  }
+}
+
+.result {
+  @include size(auto, 245px);
+  @include flex(center, flex-start);
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    @include size(300px, 20px);
+    top: 108px;
+    left: 55px;
+    box-shadow: 0 53px 46px 7px rgba(220, 47, 50, 0.3);
+    -moz-box-shadow: 0 53px 46px 7px rgba(220, 47, 50, 0.3);
+    @media screen and (max-width: $viewport-12) {
+      top: 85px;
+    }
+    @media screen and (max-width: $viewport-10) {
+      top: 80px;
+      left: 245px;
+    }
+    @media screen and (max-width: $viewport-9) {
+      @include size(260px, 20px);
+      top: 78px;
+      left: 188px;
+    }
+    @media screen and (max-width: $viewport-8) {
+      @include size(170px, 20px);
+      left: 175px;
+    }
+    @media screen and (max-width: $viewport-6) {
+      @include size(250px, 20px);
+      left: 116px;
+    }
+    @media screen and (max-width: $viewport-5) {
+      @include size(140px, 20px);
+      top: 78px;
+      left: 104px;
+    }
+    @media screen and (max-width: $viewport-4) {
+      @include size(160px, 20px);
+      top: 84px;
+      left: 72px;
+    }
+  }
+
+  @media screen and (max-width: $viewport-12) {
+    @include size(auto, 215px);
+  }
+  @media screen and (max-width: $viewport-10) {
+    @include flex(center, center);
+  }
+  @media screen and (max-width: $viewport-9) {
+    padding-right: 8%;
+  }
+  @media screen and (max-width: $viewport-6) {
+    padding-right: 0;
+  }
+
+  &__white {
+    position: absolute;
+    @include size(253px, 26px);
+    top: 47px;
+    left: 81px;
+    z-index: 0;
+    @media screen and (max-width: $viewport-8) {
+      left: 52px;
+    }
+    @media screen and (max-width: $viewport-5) {
+      @include size(190px, 26px);
+      left: 23px;
+    }
+  }
+
+  &__btn {
+    position: relative;
+    @include size(414px, 96px);
+    background: rgb(220, 47, 50);
+    background: linear-gradient(0deg, rgba(220, 47, 50, 1) 0%, rgba(224, 94, 37, 1) 100%);
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    padding-bottom: 36px;
+    box-shadow: 0 6px #b02021;
+
+    @media screen and (max-width: $viewport-8) {
+      @include size(358px, 96px);
+    }
+    @media screen and (max-width: $viewport-5) {
+      @include size(234px, 96px);
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      @include size(150px, 180px);
+      top: -57px;
+      left: -32px;
+      background: url(../images/box1.png) center no-repeat;
+      background-size: 120px 120px;
+      @media screen and (max-width: $viewport-5) {
+        top: -63px;
+        left: -71px;
+        background-size: 70px 70px;
+      }
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      @include size(150px, 140px);
+      top: -21px;
+      left: 356px;
+      background: url(../images/list.png) center no-repeat;
+      @media screen and (max-width: $viewport-8) {
+        top: -36px;
+        left: 288px;
+        background-size: 94%;
+      }
+
+      @media screen and (max-width: $viewport-5) {
+        top: -47px;
+        left: 195px;
+        @include size(90px, 140px);
+      }
+      @media screen and (max-width: $viewport-4) {
+        @include size(84px, 120px);
+      }
+    }
+
+    &:hover {
+      background: rgb(255, 35, 35);
+      background: linear-gradient(0deg, rgba(255, 35, 35, 1) 0%, rgba(255, 123, 65, 1) 100%);
+    }
+
+    &:active {
+      background: rgb(255, 35, 35);
+      background: linear-gradient(0deg, rgba(255, 35, 35, 1) 0%, rgba(255, 123, 65, 1) 100%);
+      box-shadow: 0 2px #b02021;
+      transform: translateY(5px);
+    }
+  }
+
+  &__start {
+    @include font("GothamPro", 20px, normal, 100, $primary);
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    @media screen and (max-width: $viewport-5) {
+      @include font("GothamPro", 18px, normal, 100, $primary);
+    }
+  }
+
+
+  &__gift {
+    position: absolute;
+    @include size(265px, 30px);
+    @include font("BerlingskeSerif", 15.5px, normal, 700, rgb(220, 47, 50));
+    letter-spacing: 0.5px;
+    top: 49px;
+    left: 74px;
+    z-index: 1;
+    @media screen and (max-width: $viewport-8) {
+      @include font("BerlingskeSerif", 14.5px, normal, 700, rgb(220, 47, 50));
+      top: 50px;
+      left: 47px;
+    }
+    @media screen and (max-width: $viewport-5) {
+      @include font("BerlingskeSerif", 11.5px, normal, 700, rgb(220, 47, 50));
+      top: 52px;
+      left: -15px;
+    }
+  }
+}
+
+.advantages {
+  @include flex(flex-start, space-between);
+  @media screen and (max-width: $viewport-12) {
+    @include flex(flex-start, center, column);
+  }
+  @media screen and (max-width: $viewport-10) {
+    @include flex(flex-start, space-evenly);
+  }
+  @media screen and (max-width: $viewport-8) {
+    @include flex(flex-start, center, column);
+  }
+  @media screen and (max-width: $viewport-5) {
+    @include flex(center, center, column);
+  }
+
+  &__block {
+    @include flex(start, center, column);
+    @media screen and (max-width: $viewport-12) {
+      @include flex(start, center, row);
+    }
+    @media screen and (max-width: $viewport-10) {
+      @include flex(start, center, column);
+    }
+    @media screen and (max-width: $viewport-8) {
+      @include flex(start, center, row);
+    }
+  }
+
+  &__info {
+    @include flex(stretch, flex-start, column);
+    @media screen and (max-width: $viewport-12) {
+      @include flex(stretch, flex-start, row);
+    }
+    @media screen and (max-width: $viewport-10) {
+      @include flex(stretch, flex-start, column);
+    }
+    @media screen and (max-width: $viewport-8) {
+      @include flex(stretch, flex-start, row);
+    }
+    @media screen and (max-width: $viewport-5) {
+      @include flex(stretch, flex-start, column);
+    }
+  }
+
+  &__header {
+    @include font("BerlingskeSerif", 13.7px, normal, 900, $secondary);
+    padding-bottom: 10px;
+    @media screen and (max-width: $viewport-12) {
+      @include size(154px);
+    }
+    @media screen and (max-width: $viewport-10) {
+      @include size(auto);
+      padding-bottom: 10px;
+    }
+    @media screen and (max-width: $viewport-8) {
+      @include size(154px);
+    }
+  }
+
+  &__img {
+    @include flex(start, center);
+    @include size(auto, 73px);
+    @media screen and (max-width: $viewport-12) {
+      @include size(52px, 80px);
+      margin: 0 20px 0 0;
+    }
+    @media screen and (max-width: $viewport-10) {
+      @include size(auto, 73px);
+      margin: 0;
+    }
+    @media screen and (max-width: $viewport-8) {
+      @include size(52px, 80px);
+      margin: 0 20px 0 0;
+    }
+    @media screen and (max-width: $viewport-8) {
+      margin: 20px 20px 0 0;
+    }
+    @media screen and (max-width: $viewport-4) {
+      margin: 40px 20px 0 0;
+    }
+  }
+
+  &__clock {
+    margin-top: 15px;
+    @media screen and (max-width: $viewport-12) {
+      margin: 0;
+      width: 60px;
+    }
+    @media screen and (max-width: $viewport-10) {
+      @include size(auto);
+      margin-top: 15px;
+    }
+    @media screen and (max-width: $viewport-8) {
+      margin: 0;
+      width: 60px;
+    }
+  }
+
+  &__docs {
+    margin: 6px 0 0 -5px;
+    @media screen and (max-width: $viewport-12) {
+      margin: 0;
+      width: 60px;
+    }
+    @media screen and (max-width: $viewport-10) {
+      @include size(auto);
+      margin: 6px 0 0 -5px;
+    }
+    @media screen and (max-width: $viewport-8) {
+      margin: 0;
+      width: 60px;
+    }
+  }
+
+  &__guard {
+    margin-top: 12px;
+    @media screen and (max-width: $viewport-12) {
+      margin: 0;
+      width: 60px;
+    }
+    @media screen and (max-width: $viewport-10) {
+      @include size(auto);
+      margin-top: 12px;
+    }
+    @media screen and (max-width: $viewport-8) {
+      margin: 0;
+      width: 60px;
+    }
+  }
+
+  &__details {
+    @include font("MuseoSansCyrl", 10.7px, normal, 100, $fourthly);
+    letter-spacing: 0.6px;
+    @media screen and (max-width: $viewport-12) {
+      @include size(100%);
+    }
+    @media screen and (max-width: $viewport-10) {
+      @include size(auto);
+    }
+    @media screen and (max-width: $viewport-8) {
+      @include size(100%);
+    }
+  }
+
+  &__block1 {
+    @include size(150px);
+    @media screen and (max-width: $viewport-16) {
+      @include size(126px);
+    }
+    @media screen and (max-width: $viewport-10) {
+      @include size(150px);
+    }
+    @media screen and (max-width: $viewport-8) {
+      @include size(126px);
+    }
+  }
+
+  &__block2 {
+    @include size(138px);
+    @media screen and (max-width: $viewport-16) {
+      @include size(120px);
+    }
+    @media screen and (max-width: $viewport-10) {
+      @include size(138px);
+    }
+    @media screen and (max-width: $viewport-8) {
+      @include size(120px);
+    }
+  }
+
+  &__block3 {
+    @include size(213px);
+    @media screen and (max-width: $viewport-16) {
+      @include size(162px);
+    }
+    @media screen and (max-width: $viewport-10) {
+      @include size(213px);
+    }
+    @media screen and (max-width: $viewport-8) {
+      @include size(162px);
+    }
+  }
+
+  &__block1,
+  &__block2,
+  &__block3 {
+    @media screen and (max-width: $viewport-12) {
+      @include size(auto, auto);
+    }
+    @media screen and (max-width: $viewport-10) {
+      @include size(166px, auto);
+    }
+    @media screen and (max-width: $viewport-8) {
+      @include size(auto, auto);
+    }
+  }
+}
+
+.wrapper1 {
+  @include size(33vw);
+  @media screen and (max-width: $viewport-14) {
+    @include size(35.2vw);
+  }
+  @media screen and (max-width: $viewport-12) {
+    @include size(42.2vw);
+  }
+  @media screen and (max-width: $viewport-10) {
+    @include size(80vw);
+  }
+}
+
+.wrapper2 {
+  @include size(33vw);
+  @media screen and (max-width: $viewport-16) {
+    @include size(36vw);
+  }
+  @media screen and (max-width: $viewport-14) {
+    @include size(38vw);
+  }
+  @media screen and (max-width: $viewport-12) {
+    @include size(48vw);
+  }
+  @media screen and (max-width: $viewport-10) {
+    @include size(80vw);
+  }
+}
+
+.portfolio {
+  padding-top: 18px;
+
+  &__info {
+    @include flex(center, center, column);
+    @include size(auto, 193px);
+    padding-left: 56px;
+    @media screen and (max-width: $viewport-14) {
+      padding-left: 76px;
+    }
+    @media screen and (max-width: $viewport-10) {
+      padding-left: 46px;
+    }
+  }
+
+  &__header {
+    @include font("GothamPro", 18px, normal, 100, $secondary);
+    letter-spacing: 0.3px;
+    margin-bottom: 20px;
+
+    & > p {
+      position: relative;
+      text-align: center;
+
+      &:after {
+        content: "";
+        position: absolute;
+        @include size(30px, 70px);
+        top: 10px;
+        left: -59px;
+        background: url(../images/arrow.png) center no-repeat;
+      }
+
+      & > span {
+        @include font("BerlingskeSerif", 18px, normal, 900, $secondary);
+        letter-spacing: 0.3px;
+      }
+    }
+  }
+
+  &__btn {
+    @include flex(center, center);
+    width: 100%;
+  }
+
+  &__btn1 {
+    @include font("BerlingskeSerif", 18px, normal, 700, $secondary);
+    background: url("../images/white-banner-btn.png") center no-repeat;
+    margin-right: 8px;
+    @media screen and (max-width: $viewport-6) {
+      @include font("BerlingskeSerif", 16px, normal, 700, $fourthly);
+      background-size: 145px 59px;
+    }
+    @media screen and (max-width: $viewport-5) {
+      @include font("BerlingskeSerif", 16px, normal, 700, $fourthly);
+      background-size: 125px 50px;
+    }
+    @media screen and (max-width: $viewport-4) {
+      @include font("BerlingskeSerif", 13px, normal, 700, $fourthly);
+      background-size: 95px 50px;
+    }
+
+    &:hover {
+      -webkit-box-shadow:  0 15px 23px -10px rgba(0, 0, 0, 0.1);
+      -moz-box-shadow: 0 15px 23px -10px rgba(0, 0, 0, 0.1);
+      box-shadow: 0px -21px 28px -29px rgba(0, 0, 0, 0.3),
+      0 15px 23px -10px rgba(0, 0, 0, 0.1);
+    }
+
+    &:active {
+      -webkit-box-shadow:  0 15px 23px -10px rgba(220, 47, 50, 0.1);
+      -moz-box-shadow: 0 15px 23px -10px rgba(220, 47, 50, 0.1);
+      box-shadow: 0px -21px 28px -29px rgba(220, 47, 50, 0.3),
+      0 15px 23px -10px rgba(220, 47, 50, 0.1)
+    }
+  }
+
+  &__btn2 {
+    @include font("BerlingskeSerif", 18px, normal, 700, $fourthly);
+    background: url("../images/transparent-banner-btn.png") center no-repeat;
+    margin-left: 8px;
+    @media screen and (max-width: $viewport-6) {
+      @include font("BerlingskeSerif", 16px, normal, 700, $fourthly);
+      background-size: 145px 59px;
+    }
+    @media screen and (max-width: $viewport-5) {
+      @include font("BerlingskeSerif", 16px, normal, 700, $fourthly);
+      background-size: 125px 50px;
+    }
+    @media screen and (max-width: $viewport-4) {
+      @include font("BerlingskeSerif", 13px, normal, 700, $fourthly);
+      background-size: 95px 50px;
+    }
+
+    &:hover {
+      -webkit-box-shadow:  0 15px 23px -10px rgba(0, 0, 0, 0.1);
+      -moz-box-shadow: 0 15px 23px -10px rgba(0, 0, 0, 0.1);
+      box-shadow: 0px -21px 28px -29px rgba(0, 0, 0, 0.3),
+      0 15px 23px -10px rgba(0, 0, 0, 0.1);
+    }
+
+    &:active {
+      -webkit-box-shadow:  0 15px 23px -10px rgba(220, 47, 50, 0.1);
+      -moz-box-shadow: 0 15px 23px -10px rgba(220, 47, 50, 0.1);
+      box-shadow: 0px -21px 28px -29px rgba(220, 47, 50, 0.3),
+      0 15px 23px -10px rgba(220, 47, 50, 0.1)
+    }
+  }
+
+  &__btn1,
+  &__btn2 {
+    @include size(185px, 70px);
+    border: 0;
+    outline: none;
+  }
+}
+
+.slider {
+  @include flex(flex-start, center);
+  @include size(auto, 52.8vh);
+  padding: 0 15px 0 0;
+  position: relative;
+
+  @media screen and (max-width: $viewport-14) {
+    padding: 0;
+  }
+  @media screen and (max-width: $viewport-9) {
+    padding-right: 33px;
+  }
+  @media screen and (max-width: $viewport-8) {
+    padding-right: 44px;
+  }
+  @media screen and (max-width: $viewport-6) {
+    padding-right: 40px;
+    @include size(auto, 40.8vh);
+  }
+  @media screen and (max-width: $viewport-5) {
+    padding-right: 30px;
+  }
+  @media screen and (max-width: $viewport-4) {
+    padding-right: 25px;
+  }
+}
+
+.container {
+  @include size(29vw, 39vh);
+  background: transparent;
+  overflow: hidden;
+  clip-path: inset(0% 0% 0% 11% round 105px);
+  transform: perspective(441px) rotateY(-6deg);
+  position: relative;
+  @media screen and (max-width: $viewport-18) {
+    @include size(32vw, 39vh);
+  }
+  @media screen and (max-width: $viewport-16) {
+    @include size(36vw, 39vh);
+  }
+  @media screen and (max-width: $viewport-14) {
+    @include size(38vw, 39vh);
+  }
+  @media screen and (max-width: $viewport-12) {
+    @include size(44vw, 39vh);
+  }
+  @media screen and (max-width: $viewport-10) {
+    @include size(52vw, 39vh);
+  }
+  @media screen and (max-width: $viewport-9) {
+    @include size(61vw, 39vh);
+  }
+  @media screen and (max-width: $viewport-8) {
+    @include size(72vw, 39vh);
+  }
+  @media screen and (max-width: $viewport-6) {
+    @include size(66vw, 27vh);
+  }
+  @media screen and (max-width: $viewport-5) {
+    @include size(78vw, 25vh);
+  }
+  @media screen and (max-width: $viewport-4) {
+    @include size(78vw, 20vh);
+  }
+
+  &__pic {
+    transform: perspective(441px) rotateY(7deg) scaleX(1.04) scaleY(1.06);
+    position: absolute;
+    left: 15px;
+    top: -13px;
+    min-width: 441px;
+    min-height: 430px;
+    @include size(100%, auto);
+    @media screen and (max-width: $viewport-6) {
+      left: 6px;
+      top: 0;
+      min-width: 331px;
+      min-height: 320px;
+    }
+    @media screen and (max-width: $viewport-6) {
+      top: -17px;
+      left: 3px;
+      min-width: 217px;
+      min-height: 304px;
+    }
+    @media screen and (max-width: $viewport-5) {
+      top: -11px;
+      min-width: 205px;
+      min-height: 278px;
+    }
+    @media screen and (max-width: $viewport-4) {
+      max-width: 312px;
+      min-height: 221px;
+      max-height: 221px;
+    }
+  }
+
+  &__border {
+    @include size(24vw, 36vh);
+    position: absolute;
+    top: 50%;
+    left: 56%;
+    transform: translate(-50%, -50%);
+    border-radius: 105px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    @media screen and (max-width: $viewport-18) {
+      @include size(26.5vw, 36vh);
+    }
+    @media screen and (max-width: $viewport-16) {
+      @include size(28.8vw, 36vh);
+    }
+    @media screen and (max-width: $viewport-14) {
+       @include size(31.1vw, 36vh);
+    }
+    @media screen and (max-width: $viewport-12) {
+      @include size(36.6vw, 36vh);
+    }
+    @media screen and (max-width: $viewport-10) {
+      @include size(42.8vw, 36vh);
+    }
+    @media screen and (max-width: $viewport-9) {
+      @include size(50.8vw, 36vh);
+    }
+    @media screen and (max-width: $viewport-8) {
+      @include size(59.8vw, 36vh);
+    }
+    @media screen and (max-width: $viewport-6) {
+      @include size(54.8vw, 24vh);
+    }
+    @media screen and (max-width: $viewport-5) {
+      @include size(60.8vw, 22.8vh);
+    }
+    @media screen and (max-width: $viewport-4) {
+      @include size(59.8vw, 18.8vh);
+    }
+  }
+}
+
+.pagination {
+  position: absolute;
+  top: 347px;
+  left: 112px;
+  @media screen and (max-width: $viewport-10) {
+    left: 245px;
+  }
+  @media screen and (max-width: $viewport-9) {
+    left: 195px;
+  }
+  @media screen and (max-width: $viewport-8) {
+    left: 145px;
+  }
+  @media screen and (max-width: $viewport-6) {
+    top: 262px;
+  }
+  @media screen and (max-width: $viewport-5) {
+    top: 234px;
+    left: 60px;
+  }
+  @media screen and (max-width: $viewport-4) {
+    top: 193px;
+    left: 82px;
+  }
+
+  &__badge {
+    position: relative;
+    @include size(110px, 110px);
+    background: url("../images/badge-big.png") center no-repeat;
+
+    & > p {
+      position: absolute;
+      top: 42px;
+      left: 41px;
+      @include font("BerlingskeSerif", 16px, normal, 700, $primary);
+    }
+  }
+
+  &__btn1 {
+    position: absolute;
+    top: 47px;
+    left: 19px;
+    background: url("../images/arrow-back.png") center no-repeat;
+  }
+
+  &__btn2 {
+    position: absolute;
+    top: 47px;
+    left: 74px;
+    background: url("../images/arrow-next.png") center no-repeat;
+  }
+
+  &__btn1,
+  &__btn2 {
+    @include size(15px, 15px);
+    border: 0;
+    outline: none;
+  }
+
+  &__first{
+    @include font("BerlingskeSerif", 20px, normal, 700, $primary);
+  }
+}
